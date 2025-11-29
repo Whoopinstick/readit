@@ -1,0 +1,15 @@
+from fastapi import FastAPI
+import uvicorn
+
+app = FastAPI()
+
+@app.get("/")
+async def get_root():
+    return {"response": "Hello, ReadIt!"}
+
+
+
+
+if __name__ == "__main__":
+    # for local development
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
