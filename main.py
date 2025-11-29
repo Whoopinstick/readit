@@ -3,11 +3,10 @@ import uvicorn
 
 app = FastAPI()
 
+
 @app.get("/")
 async def get_root():
     return {"response": "Hello, ReadIt!"}
-
-
 
 
 if __name__ == "__main__":
