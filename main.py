@@ -1,7 +1,9 @@
 from fastapi import FastAPI
+from app.routers import book_router
 import uvicorn
 
 app = FastAPI()
+app.include_router(book_router)
 
 
 @app.get("/")
