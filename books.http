@@ -1,0 +1,29 @@
+### GET request to root
+GET http://localhost:8001
+
+### GET all books
+GET http://localhost:8001/books/
+
+### GET book with id = 1
+GET http://localhost:8001/books/1
+
+### POST attempt to create invalid book
+POST http://localhost:8001/books/
+Content-Type: application/json
+
+{
+  "name": "Book 2",
+  "description": "This is the second book"
+}
+
+
+### POST create book
+POST http://localhost:8001/books/
+Content-Type: application/json
+
+{
+  "name": "Book 2",
+  "description": "This is the second book",
+  "year": 2025
+}
+
