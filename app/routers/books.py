@@ -10,7 +10,7 @@ books_db = {1: {"name": "Book1", "description": "The first Book", "year": 2025}}
 class CreateBookModel(BaseModel):
     name: str = Field(min_length=1, max_length=500)
     description: str = Field(min_length=3, max_length=1_000)
-    year: int = Field(gt=0, lte=datetime.now().year)
+    year: int = Field(gt=0, lte=datetime.now().year, default=datetime.now().year)
 
 
 class ResponseBookModel(CreateBookModel):
