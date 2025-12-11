@@ -1,6 +1,7 @@
-from fastapi import FastAPI
-from app.routers import book_router
 import uvicorn
+from fastapi import FastAPI
+
+from app.routers import book_router
 
 app = FastAPI()
 app.include_router(book_router)
